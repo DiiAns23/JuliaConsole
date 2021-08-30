@@ -1,0 +1,17 @@
+
+<select (change)="onThemeSelect($event.target.value)">
+  <option 
+    *ngFor="let item of themes"
+    [value]="item">
+    {{ item }}
+  </option>
+</select>
+
+
+<codemirror 
+  #editor
+  [(ngModel)]="code"
+  [config]="config"
+  (focus)="onFocus()"
+  (blur)="onBlur()">
+</codemirror>
